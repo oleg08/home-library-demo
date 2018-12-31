@@ -12,10 +12,10 @@ export class AppComponent {
   books;
 
   constructor(private http: HttpClient) {
-    http.get('http://fenix:3000/books')
-      .subscribe(res => {
-        console.log(res);
-        this.books = res;
-      });
+    // http.get('http://fenix:3000/books')
+    //   .subscribe(res => {
+    //     console.log(res);
+    //     this.books = res;
+    //   });
   }
 }
