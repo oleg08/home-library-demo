@@ -1,6 +1,7 @@
 {
   "name": "home-library",
   "version": "0.0.0",
+  "license": "MIT",
   "engines": {
     "node": "8.11.3",
     "npm": "5.6.0"
