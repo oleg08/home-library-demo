@@ -13,7 +13,7 @@ export class AppComponent {
   books;
 
   constructor(private http: HttpClient) {
-    http.get('http://home-library-server.herokuapp.com/books.json')
+    http.get('https://home-library-server.herokuapp.com/books.json')
       .subscribe(res => {
         console.log(res);
         this.books = res;
