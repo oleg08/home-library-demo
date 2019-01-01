@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, enableProdMode } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { HttpClientModule } from '@angular/common/http';
+
+enableProdMode();
 
 @Component({
   selector: 'app-root',
