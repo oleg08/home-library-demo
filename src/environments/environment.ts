@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'http://fenix:3000'
+  serverUrl: 'http://fenix:3000',
+  token_auth_config: {
+    apiBase: 'http://fenix:3000'
+  }
 };
 
 /*
