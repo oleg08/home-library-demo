@@ -1,5 +1,6 @@
 import { Component, enableProdMode } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 enableProdMode();
 
@@ -13,7 +14,7 @@ export class AppComponent {
   books;
 
   constructor(private http: HttpClient) {
-    http.get('https://home-library-server.herokuapp.com/books.json')
+    http.get(environment.serverUrl + '/books.json')
       .subscribe(res => {
         console.log(res);
         this.books = res;
