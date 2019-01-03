@@ -1,4 +1,5 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { AuthService } from '../services/auth.service';
 import {AngularTokenService} from 'angular-token';
 
 @Component({
@@ -14,13 +15,13 @@ export class LoginFormComponent implements OnInit {
   };
 
   @Output() onFormResult = new EventEmitter<any>();
-  constructor(private tokenAuthSerivce: AngularTokenService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {}
 
   onSignInSubmit() {
 
-    this.tokenAuthSerivce.signIn(this.signInUser).subscribe(
+    this.authService.logInUser(this.signInUser).subscribe(
 
       res => {
         if (res.status === 200) {
